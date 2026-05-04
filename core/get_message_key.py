@@ -9,11 +9,11 @@ class GetKey:
     def __init__(self):
         self.kdf = ""
 
-    def get_key(self, password: str, bytes: bytes):
+    def get_key(self, password: str, salt: bytes):
         self.kdf = PBKDF2HMAC(
             algorithm=hashes.SHA256(),
             length=32,
-            salt=os.getenv("SALT"),
+            salt=salt,
             iterations=100000
         )
         return base64.urlsafe_b64encode(self.kdf.derive(password.encode()))

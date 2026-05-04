@@ -13,7 +13,8 @@ class Decrypt:
     def decrypt_message(self, token, password):
         try:
             salt = os.getenv("SALT")
-            self.key = self.get_key.get_key(password, salt)
+            salt_bytes = salt.encode()
+            self.key = self.get_key.get_key(password, salt_bytes)
             return Fernet(self.key).decrypt(token.encode()).decode()
         except Exception:
             return None

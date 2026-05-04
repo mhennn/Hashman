@@ -15,7 +15,7 @@ class HashUI:
         if self.secret_data:
             self.viewing_mode()
         else:
-            pass
+            self.creation_mode()
 
     def viewing_mode(self):
         st.info("A Secret Message has been sent to you")
