@@ -18,7 +18,7 @@ def viewing_mode():
         decrypted = decrypt.decrypt_message(secret_data, inputted_pwd)
         if decrypted:
             st.toast("Message Decrypted!", icon="✅")
-            st.code(decrypt, language=None)
+            st.code(decrypted, language=None)
         else:
             st.toast("Incorrect Password or Corrupted Link. Try Again!", icon="‼️")
 

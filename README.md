@@ -37,7 +37,7 @@ def get_key(self, password: str, salt: bytes):
 ![viewing_mode](/sample_img/viewing_mode.png)
 
 ### Installation Method
-1. Environment
+1. Environment (Create variable "SALT" here)
 ```bash
 py -m venv .venv
 ```
