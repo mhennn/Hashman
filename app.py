@@ -2,7 +2,7 @@ import streamlit as st
 from core.decrypt import Decrypt
 from core.encrypt import Encrypt
 
-st.title("Hashman 🔐#️⃣")
+st.title("Hashman 🔐⚠️")
 st.markdown("<h6>Hashman - Your secret vault for your message, stored in URL 🔗</h6>", unsafe_allow_html=True)
 
 query_params = st.query_params
@@ -23,7 +23,7 @@ def viewing_mode():
             st.toast("Incorrect Password or Corrupted Link. Try Again!", icon="‼️")
 
 def creation_mode():
-    st.subheader("Create a Secret 🔐")
+    st.subheader("Create a Secret 🕵🏻")
     cols = st.columns(2)
     with cols[0]:
         msg = st.text_input("Your Message", key="secret_msg")
